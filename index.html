@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futbol Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="#inicio" class="logo">
+                Futbol<span class="logo-highlight">Store</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#reseñas">Reseñas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>La Pasión del Fútbol, <span class="text-highlight">a tu Alcance</span></h1>
+                <p>Encuentra las últimas camisetas, los botines más avanzados y todo lo que necesitas para vivir el deporte rey.</p>
+                <a href="#productos" class="btn btn-primary">Ver Productos</a>
+            </div>
+        </section>
+
+        <section id="productos" class="products-section">
+            <div class="container">
+                <h2 class="section-title">Nuestros <span class="text-highlight">Productos</span></h2>
+                <div class="products-grid">
+                    <!-- Producto 1 -->
+                    <div class="product-card">
+                        <img src="/assets/imagenes/camiseta-seleccion.jpg" alt="Camiseta Titular Selección 2024">
+                        <div class="card-content">
+                            <h3>Camiseta Titular Selección 2024</h3>
+                            <p class="category">Camisetas</p>
+                            <div class="card-footer">
+                                <span class="price">$99.99</span>
+                                <button class="btn btn-secondary">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 2 -->
+                    <div class="product-card">
+                        <img src="/assets/imagenes/botines.jpg" alt="Botines de Fútbol Pro-X">
+                        <div class="card-content">
+                            <h3>Botines de Fútbol Pro-X</h3>
+                            <p class="category">Botines</p>
+                            <div class="card-footer">
+                                <span class="price">$149.99</span>
+                                <button class="btn btn-secondary">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 3 -->
+                    <div class="product-card">
+                        <img src="/assets/imagenes/pelota.jpg" alt="Pelota Oficial de la Liga">
+                        <div class="card-content">
+                            <h3>Pelota Oficial de la Liga</h3>
+                            <p class="category">Pelotas</p>
+                            <div class="card-footer">
+                                <span class="price">$45.00</span>
+                                <button class="btn btn-secondary">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 4 -->
+                    <div class="product-card">
+                        <img src="/assets/imagenes/camiseta-man-united.jpg" alt="Camiseta Alternativa Manchester United">
+                        <div class="card-content">
+                            <h3>Camiseta Alternativa Manchester United</h3>
+                            <p class="category">Camisetas</p>
+                            <div class="card-footer">
+                                <span class="price">$89.99</span>
+                                <button class="btn btn-secondary">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reseñas" class="reviews-section">
+            <div class="container">
+                <h2 class="section-title">Lo que dicen nuestros <span class="text-highlight">Clientes</span></h2>
+                <div class="reviews-grid">
+                    <!-- Reseña 1 -->
+                    <div class="review-card">
+                        <img src="/assets/imagenes/persona-1.jpg" alt="Carlos Rodríguez" class="review-avatar">
+                        <h4>Carlos Rodríguez</h4>
+                        <div class="rating">★★★★★</div>
+                        <p>"¡La calidad de la camiseta es increíble! Llegó súper rápido. Totalmente recomendado."</p>
+                    </div>
+                    <!-- Reseña 2 -->
+                    <div class="review-card">
+                        <img src="/assets/imagenes/persona-2.jpg" alt="Ana Gómez" class="review-avatar">
+                        <h4>Ana Gómez</h4>
+                        <div class="rating">★★★★☆</div>
+                        <p>"Los botines son muy cómodos y ligeros, perfectos para jugar. El diseño es genial."</p>
+                    </div>
+                    <!-- Reseña 3 -->
+                    <div class="review-card">
+                        <img src="/assets/imagenes/persona-3.jpg" alt="Javier Fernández" class="review-avatar">
+                        <h4>Javier Fernández</h4>
+                        <div class="rating">★★★★★</div>
+                        <p>"Excelente servicio al cliente. La pelota es de calidad profesional. ¡Volveré a comprar sin duda!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Ponte en <span class="text-highlight">Contacto</span></h2>
+                <div class="contact-content">
+                    <div class="contact-form-container">
+                        <form action="https://formspree.io/f/xblpdabk" method="POST" class="contact-form">
+                            <div>
+                                <label for="name">Tu Nombre</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div>
+                                <label for="email">Tu Correo Electrónico</label>
+                                <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+                            </div>
+                            <div>
+                                <label for="message">Tu Mensaje</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                    <div class="contact-media-container">
+                        <div class="video-wrapper">
+                            <iframe 
+                                src="https://www.youtube-nocookie.com/embed/p-QOLsypsnQ" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p>Revive momentos épicos del fútbol.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+            <p>&copy; 2025 FutbolStore</p>
+        </div>
+    </footer>
+
+</body>
+</html>
