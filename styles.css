@@ -130,7 +130,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('/assets/imagenes/fondo.jpg') no-repeat center center/cover;
+    background: url('assets/imagenes/fondo.jpg') no-repeat center center/cover;
     padding-top: 80px; /* Header offset */
 }
 
