@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Futbol Store - Tu tienda online de confianza para camisetas, botines y pelotas de fútbol. Envíos a todo el país.">
     <title>Futbol Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +23,11 @@
                     <li><a href="#productos">Productos</a></li>
                     <li><a href="#reseñas">Reseñas</a></li>
                     <li><a href="#contacto">Contacto</a></li>
+                    <li>
+                        <a href="#" id="cart-btn" aria-label="Ver Carrito">
+                            🛒 <span id="cart-count">0</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -40,55 +46,9 @@
         <section id="productos" class="products-section">
             <div class="container">
                 <h2 class="section-title">Nuestros <span class="text-highlight">Productos</span></h2>
-                <div class="products-grid">
-                    <!-- Producto 1 -->
-                    <div class="product-card">
-                        <img src="assets/imagenes/camiseta-seleccion.jpg" alt="Camiseta Titular Selección 2024">
-                        <div class="card-content">
-                            <h3>Camiseta Titular Selección 2024</h3>
-                            <p class="category">Camisetas</p>
-                            <div class="card-footer">
-                                <span class="price">$99.99</span>
-                                <button class="btn btn-secondary">Añadir al Carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Producto 2 -->
-                    <div class="product-card">
-                        <img src="assets/imagenes/botines.jpg" alt="Botines de Fútbol Pro-X">
-                        <div class="card-content">
-                            <h3>Botines de Fútbol Pro-X</h3>
-                            <p class="category">Botines</p>
-                            <div class="card-footer">
-                                <span class="price">$149.99</span>
-                                <button class="btn btn-secondary">Añadir al Carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Producto 3 -->
-                    <div class="product-card">
-                        <img src="assets/imagenes/pelota.jpg" alt="Pelota Oficial de la Liga">
-                        <div class="card-content">
-                            <h3>Pelota Oficial de la Liga</h3>
-                            <p class="category">Pelotas</p>
-                            <div class="card-footer">
-                                <span class="price">$45.00</span>
-                                <button class="btn btn-secondary">Añadir al Carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Producto 4 -->
-                    <div class="product-card">
-                        <img src="assets/imagenes/camiseta-man-united.jpg" alt="Camiseta Alternativa Manchester United">
-                        <div class="card-content">
-                            <h3>Camiseta Alternativa Manchester United</h3>
-                            <p class="category">Camisetas</p>
-                            <div class="card-footer">
-                                <span class="price">$89.99</span>
-                                <button class="btn btn-secondary">Añadir al Carrito</button>
-                            </div>
-                        </div>
-                    </div>
+                <!-- El contenido se cargará dinámicamente con JS -->
+                <div class="products-grid" id="products-container">
+                    <p class="loading-text">Cargando productos...</p>
                 </div>
             </div>
         </section>
@@ -127,18 +87,21 @@
                 <h2 class="section-title">Ponte en <span class="text-highlight">Contacto</span></h2>
                 <div class="contact-content">
                     <div class="contact-form-container">
-                        <form action="https://formspree.io/f/xblpdabk" method="POST" class="contact-form">
+                        <form id="contact-form" action="https://formspree.io/f/xblpdabk" method="POST" class="contact-form">
                             <div>
                                 <label for="name">Tu Nombre</label>
                                 <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                <span class="error-msg" id="name-error"></span>
                             </div>
                             <div>
                                 <label for="email">Tu Correo Electrónico</label>
                                 <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+                                <span class="error-msg" id="email-error"></span>
                             </div>
                             <div>
                                 <label for="message">Tu Mensaje</label>
                                 <textarea id="message" name="message" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
+                                <span class="error-msg" id="message-error"></span>
                             </div>
                             <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
                         </form>
@@ -160,10 +123,35 @@
         </section>
     </main>
 
+    <!-- Modal del Carrito -->
+    <div id="cart-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Tu Carrito</h2>
+                <button id="close-modal" class="close-btn" aria-label="Cerrar carrito">&times;</button>
+            </div>
+            <div id="cart-items" class="modal-body">
+                <!-- Items del carrito se renderizan aquí -->
+                <p>Tu carrito está vacío.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="cart-total">
+                    <h3>Total: $<span id="cart-total-price">0.00</span></h3>
+                </div>
+                <div class="modal-actions">
+                    <button id="clear-cart" class="btn btn-secondary">Vaciar</button>
+                    <button id="checkout-btn" class="btn btn-primary">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="main-footer">
-            <p>&copy; 2025 FutbolStore</p>
+        <div class="container">
+            <p>&copy; 2025 FutbolStore. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
