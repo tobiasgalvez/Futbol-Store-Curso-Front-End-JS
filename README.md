@@ -19,6 +19,7 @@ Integración con Formspree para el envío funcional de correos.
 Diseño totalmente Responsivo (Mobile First) utilizando CSS Grid y Flexbox.
 Metaetiquetas para SEO básico.
 Navegación fluida e interactiva.
+
 🛠️ Tecnologías Utilizadas
 HTML5: Estructura semántica.
 CSS3: Variables CSS, Flexbox, Grid, Animaciones y Media Queries.
