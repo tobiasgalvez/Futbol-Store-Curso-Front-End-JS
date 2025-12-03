@@ -21,7 +21,7 @@ Metaetiquetas para SEO básico.
 Navegación fluida e interactiva.
 
 🛠️ Tecnologías Utilizadas
-HTML5: Estructura semántica.
-CSS3: Variables CSS, Flexbox, Grid, Animaciones y Media Queries.
-JavaScript: Lógica de negocio, manipulación del DOM y Fetch API.
-LocalStorage: Almacenamiento de sesión del lado del cliente.
+- HTML5: Estructura semántica.
+- CSS3: Variables CSS, Flexbox, Grid, Animaciones y Media Queries.
+- JavaScript: Lógica de negocio, manipulación del DOM y Fetch API.
+- LocalStorage: Almacenamiento de sesión del lado del cliente.
