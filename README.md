@@ -1,5 +1,6 @@
 # ⚽ Futbol Store
 Futbol Store es una aplicación web e-commerce diseñada para la venta de artículos deportivos de alta gama. Este proyecto simula una tienda online completa, integrando consumo de APIs externas, gestión de estado local y validación de formularios interactiva.
+
 🚀 Características Principales
 1. Carga Dinámica de Productos (Fetch API)
 Los productos ya no están "hardcodeados" en el HTML.
